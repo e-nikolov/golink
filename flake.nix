@@ -147,7 +147,6 @@
                   ${cfg.package}/bin/golink ${builtins.concatStringsSep " " args}
                 '';
               wantedBy = [ "multi-user.target" ];
-              after = [ "network-online.target" ];
               serviceConfig = {
                 User = cfg.user;
                 Group = cfg.group;
